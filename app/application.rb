@@ -11,12 +11,13 @@ class Application
     if req.path=="/items/" + item_name
       if @@items.include?(item_name)
        item =  @@items.find{|el| el.name == item_name}
-        resp.write "#{item.price}"
+        
         resp.status = 200
       else 
         resp.write "Item not found"
         resp.status = 400
       end
+      resp.write "#{item.price}"
     else
       resp.write "Route not found"
       resp.status = 404
