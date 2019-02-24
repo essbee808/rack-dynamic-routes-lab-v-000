@@ -10,7 +10,7 @@ class Application
     
     if req.path=="/items/'#{item_name}'" && @@items.include?(item_name)
         item = @@items.select do |el| 
-          el.name == item_name
+          if el.name == item_name
         resp.write item.price
         resp.status = 200
     elsif req.path=="/items/'#{item_name}'" && @@items.include?(item_name)
