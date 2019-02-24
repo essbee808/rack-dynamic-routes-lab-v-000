@@ -10,7 +10,7 @@ class Application
     
     if req.path=="/items/" + item_name
       if @@items.include?(item_name)
-       item_=  @@items.find{|el| el.name == item_name}
+       =  @@items.find{|el| el.name == item_name}
         resp.write item.price
         resp.status = 200
       else 
