@@ -13,7 +13,9 @@ class Application
         if item
           resp.write item.price
         else
-          
+          resp.write "Item not found"
+          resp.status = 400
+        end
         # if @@items.include?(item_name)
         #   item =  @@items.find{|el| el.name == item_name}
         #   resp.write item.price
