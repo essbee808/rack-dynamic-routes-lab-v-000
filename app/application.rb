@@ -8,7 +8,7 @@ class Application
     
     item_name = req.path.split("/items/").last
   
-    if req.path
+    if req.path.include?
       item = @@items.each{|i| i.name == item_name}
         if @@items.include?(item)
       
