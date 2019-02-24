@@ -11,8 +11,11 @@ class Application
     if req.path=="/items/'#{item_name}'" && @@items.include?(item_name)
         item = @@items.select do |el| 
           if el.name == item_name
-        resp.write item.price
-        resp.status = 200
+            resp.write item.price
+            resp.status = 200
+          else 
+            
+       
     elsif req.path=="/items/'#{item_name}'" && @@items.include?(item_name)
         resp.write "Item not found"
         resp.status = 400
