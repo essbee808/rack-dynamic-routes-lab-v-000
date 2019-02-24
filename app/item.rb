@@ -1,4 +1,3 @@
-require 'pry'
 
 class Item
   attr_accessor :name, :price
@@ -8,6 +7,5 @@ class Item
   def initialize(name,price)
     @name = name
     @price = price
-    @@items << self
   end
 end
