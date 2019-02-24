@@ -9,7 +9,7 @@ class Application
     item_name = req.path.split("/items/").last
     
     if req.path=="/items/#{item_name}"
-        item = @@items.each do |el| 
+        @@items.each do |el| 
           if el.name == item_name
             resp.write el.price
           else 
