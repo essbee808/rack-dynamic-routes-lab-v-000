@@ -8,7 +8,7 @@ class Application
   
     item_name = req.path.split("/items/").last
     
-    if req.path.match(/items/)
+    if req.path.match(/items/) && @@items.include?(item_name)
       
       if @@items.include?(item_name)
         item = @@items.select{|el| el.name == item_name}
