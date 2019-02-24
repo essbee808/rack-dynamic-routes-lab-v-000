@@ -12,15 +12,14 @@ class Application
         item = @@items.each do |el| 
           if el.name == item_name
             resp.write el.price
-            resp.status == 200
           else 
             resp.write "Item not found"
-            resp.status == 400
+            resp.status = 400
           end
         end
     else
       resp.write "Route not found"
-      resp.status == 404
+      resp.status = 404
     end
     
     resp.finish
