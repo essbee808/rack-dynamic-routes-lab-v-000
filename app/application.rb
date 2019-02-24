@@ -10,6 +10,7 @@ class Application
     
     if req.path.match(/items/) && @@items.include?(item_name)
         item = @@items.select{|el| el.name == item_name}
+        resp.write item.price
         resp.status = 200
     elsif req.path.match(/items/) && !@@items.include?(item_name)
         resp.write "Item not found"
