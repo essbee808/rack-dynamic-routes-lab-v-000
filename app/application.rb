@@ -12,7 +12,7 @@ class Application
         @@items.detect do |el| 
           el.name == item_name
         end
-          resp.write el.price
+      resp.write el.price
             resp.status = 200
           else 
             resp.write "Item not found"
