@@ -10,8 +10,9 @@ class Application
     
     if req.path=="/items/" + item_name && @@items.include?(item_name)
         @@items.detect do |el| 
-          if el.name == item_name
-            resp.write el.price
+          el.name == item_name
+        end
+          resp.write el.price
             resp.status = 200
           else 
             resp.write "Item not found"
