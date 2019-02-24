@@ -12,7 +12,7 @@ class Application
         item = @@items.select{|el| el.name == item_name}
         resp.write item.price
         resp.status = 200
-    elsif req.path.match(/items/) && !@@items.include?(item_name)
+    elsif req.path.match(/items/)
         resp.write "Item not found"
         resp.status = 400
     
