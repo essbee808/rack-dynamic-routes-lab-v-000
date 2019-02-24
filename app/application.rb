@@ -11,7 +11,7 @@ class Application
     if req.path=="/items/" + item_name
       if @@items.include?(item_name)
        item =  @@items.find{|el| el.name == item_name}
-        return item
+        return item.price
         resp.status = 200
       else 
         resp.write "Item not found"
