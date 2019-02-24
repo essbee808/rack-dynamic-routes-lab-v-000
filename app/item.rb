@@ -12,6 +12,6 @@ class Item
   end
   
   def new_item
-    
+    binding.pry
   end
 end
