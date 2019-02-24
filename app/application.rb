@@ -6,7 +6,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
     
-    @@items.
+    @@items.each do |i|
     
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
