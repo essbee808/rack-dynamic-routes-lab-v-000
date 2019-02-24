@@ -11,7 +11,7 @@ class Application
     if req.path=="/items/#{item_name}"
         item = @@items.each do |el| 
           if el.name == item_name
-            resp.write item.price
+            resp.write el.price
             resp.status = 200
           else 
             resp.write "Item not found"
