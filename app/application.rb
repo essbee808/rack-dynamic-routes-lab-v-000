@@ -18,11 +18,6 @@ class Application
             resp.status = 400
           end
         end
-       
-    elsif req.path=="/items/'#{item_name}'" && @@items.include?(item_name)
-        resp.write "Item not found"
-        resp.status = 400
-      end
     else
       resp.write "Route not found"
       resp.status = 404
