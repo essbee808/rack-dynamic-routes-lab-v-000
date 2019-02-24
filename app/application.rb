@@ -10,7 +10,8 @@ class Application
   
     if req.path=="/items/#{item_name}"
       item = @@items.detect{|i| i.name == item_name}
-        if item != nil
+        if item
+          
         else
       
         # if @@items.include?(item_name)
