@@ -14,7 +14,7 @@ class Application
             resp.write item.price
             resp.status = 200
           else 
-            
+            resp.write "Item not found"
        
     elsif req.path=="/items/'#{item_name}'" && @@items.include?(item_name)
         resp.write "Item not found"
