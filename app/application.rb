@@ -9,8 +9,7 @@ class Application
     item_name = req.path.split("/items/").last
     
     if req.path=="/items/" + item_name && @@items.include?(item_name)
-       item =  @@items.detect do |el| 
-          el.name == item_name
+       item =  @@items.detect{|el| el.name == item_name}
         end
       resp.write el.price
             resp.status = 200
