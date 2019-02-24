@@ -10,8 +10,4 @@ class Item
     @price = price
     @@items << self
   end
-  
-  def new_item
-    binding.pry
-  end
 end
